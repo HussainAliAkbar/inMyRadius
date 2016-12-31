@@ -100,7 +100,6 @@
     "no-dupe-keys": 2,
     "no-duplicate-case": 2,
     "no-empty-character-class": 2,
-    "no-empty-label": 2,
     "no-eval": 2,
     "no-ex-assign": 2,
     "no-extend-native": 2,
@@ -189,10 +188,6 @@
       2,
       "always"
     ],
-    "space-after-keywords": [
-      2,
-      "always"
-    ],
     "space-before-blocks": [
       2,
       "always"
@@ -206,7 +201,7 @@
       "never"
     ],
     "space-infix-ops": 2,
-    "space-return-throw-case": 2,
+    "keyword-spacing": 2,
     "space-unary-ops": [
       2,
       {

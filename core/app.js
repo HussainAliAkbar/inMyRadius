@@ -1,7 +1,6 @@
 'use strict';
 
 const config = require('./config');
-const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
 const responseFormatter = require('./formatter/response');
@@ -22,13 +21,9 @@ app.use(responseFormatter.formatResponse);
 // require('./routes/appRoutes')(app); // load all routes
 
 require('./bootstrap/globalAsync')().then(function() {
-    app.listen(process.env.PORT);
+  app.listen(process.env.PORT);
 }).catch(function(e) {
-    // log error here
-    console.log(e);
-    global.Logger.crash(e);
+  // log error here
+  console.log(e);
+  global.Logger.crash(e);
 });
-
-
-
-//checking lint commit
