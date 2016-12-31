@@ -1,0 +1,31 @@
+{
+  "name": "navigo-api",
+  "version": "1.0.0",
+  "description": "API for navigo",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hussain Ali Akbar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "chance": "^1.0.4",
+    "convict": "^2.0.0",
+    "db-migrate": "^0.10.0-beta.20",
+    "db-migrate-mysql": "^1.1.10",
+    "express": "^4.14.0",
+    "moment": "^2.17.1",
+    "mysql": "^2.12.0",
+    "storehouse": "https://Hussain94aa@bitbucket.org/Hussain94aa/storehouse.git"
+  },
+  "devDependencies": {
+    "eslint": "^3.12.2",
+    "nodemon": "^1.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Hussain94aa@bitbucket.org/avialdodev/navigo-web-api.git"
+  },
+  "homepage": "https://bitbucket.org/avialdodev/navigo-web-api#readme"
+}
