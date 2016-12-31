@@ -7,7 +7,8 @@
     "start": "nodemon --debug=3058 core/server.js --ignore ./core/logs",
     "lint": "./node_modules/.bin/eslint core/ lib/ --ignore-pattern ./core/apidoc",
     "migrations": "./node_modules/.bin/db-migrate up --config migrations/database.json",
-    "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json"
+    "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json",
+    "lint": "./node_modules/.bin/eslint core/ lib/ --ignore-pattern ./core/apidoc",
   },
   "author": "Hussain Ali Akbar",
   "license": "ISC",
