@@ -17,7 +17,7 @@ module.exports = {
 function formatResponse(req, res, next) {
   let jsonResponse = res.json;
   req.__requestStartTime = new Date().getTime();
-  req.__inputs = req.getInputObject();
+  // req.__inputs = req.getInputObject();
   res.json = (data) => {
     res.json = jsonResponse;
     if (data.meta) {
@@ -47,15 +47,15 @@ function formatResponse(req, res, next) {
 function processRequestResponseLogging(req, data) {
   return new Promise((resolve) => {
     if (config.get('isReqResLogEnabled')) {
-      let requestResponseInfo = {
-        duration: new Date().getTime() - req.__requestStartTime + ' ms',
-        baseUrl: req.baseUrl,
-        headers: req.headers,
-        originalUrl: req.originalUrl,
-        req: JSON.stringify(req.__inputs),
-        res: JSON.stringify(data)
-      };
-      global.Logger.info(requestResponseInfo);
+      // let requestResponseInfo = {
+      //   duration: new Date().getTime() - req.__requestStartTime + ' ms',
+      //   baseUrl: req.baseUrl,
+      //   headers: req.headers,
+      //   originalUrl: req.originalUrl,
+      //   req: JSON.stringify(req.__inputs),
+      //   res: JSON.stringify(data)
+      // };
+      // global.Logger.info(requestResponseInfo);
     }
     return resolve();
   });

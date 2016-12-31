@@ -18,12 +18,12 @@ app.use(methodOverride());
 app.use(compression());
 
 app.use(responseFormatter.formatResponse);
-// require('./routes/appRoutes')(app); // load all routes
+require('./routes/appRoutes')(app); // load all routes
 
-require('./bootstrap/globalAsync')().then(function() {
+require('./bootstrap/globalAsync')().then(() => {
   app.listen(process.env.PORT);
 }).catch(function(e) {
   // log error here
   console.log(e);
-  global.Logger.crash(e);
+  // global.Logger.crash(e);
 });
