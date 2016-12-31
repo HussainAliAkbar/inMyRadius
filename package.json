@@ -4,7 +4,10 @@
   "description": "API for navigo",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --debug=3058 core/server.js --ignore ./core/logs",
+    "lint": "./node_modules/.bin/eslint core/ lib/ --ignore-pattern ./core/apidoc",
+    "migrations": "./node_modules/.bin/db-migrate up --config migrations/database.json",
+    "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json"
   },
   "author": "Hussain Ali Akbar",
   "license": "ISC",
@@ -27,5 +30,8 @@
     "type": "git",
     "url": "git+https://Hussain94aa@bitbucket.org/avialdodev/navigo-web-api.git"
   },
-  "homepage": "https://bitbucket.org/avialdodev/navigo-web-api#readme"
+  "homepage": "https://bitbucket.org/avialdodev/navigo-web-api#readme",
+  "pre-commit": [
+    "lint"
+  ]
 }
