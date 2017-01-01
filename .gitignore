@@ -7,3 +7,4 @@ migrations/database.json
 node_modules
 .idea/
 npm-debug.log
+core/logs

@@ -4,7 +4,6 @@ const routes = require('./routes')();
 
 function setupRoutes(app) {
   app.use('/api/user', routes.user);
-  // app.use('/api/chat', routes.chat);
 }
 
 function appRoutes(app) {

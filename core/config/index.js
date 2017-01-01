@@ -19,13 +19,29 @@ let config = convict({
     docs: 'Request / Response logger bit',
     format: '*',
     default: false
+  },
+  logs: {
+    token: {
+      doc: 'Loggly token',
+      format: String,
+      default: ''
+    },
+    subdomain: {
+      doc: 'Loggly subdomain',
+      format: String,
+      default: 'abc'
+    },
+    directory: {
+      doc: 'Logs directory',
+      format: String,
+      default: path.join(__dirname, '../logs/')
+    }
   }
 });
 
 // Get config according to current environment
 let env = config.get('env');
 
-// Merge with default values (check convict module's npm page for precedence order)
 config.loadFile(path.resolve(__dirname + `/env/${env}.json`));
 
 // Validate config

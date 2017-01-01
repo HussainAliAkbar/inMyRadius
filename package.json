@@ -7,7 +7,8 @@
     "start": "nodemon --debug=3058 core/app.js --ignore ./core/logs",
     "lint": "./node_modules/.bin/eslint core/ lib/",
     "migrations": "./node_modules/.bin/db-migrate up --config migrations/database.json",
-    "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json"
+    "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json",
+    "docs": "apidoc -i core/ -o core/apidoc/"
   },
   "pre-commit": [
     "lint"
@@ -16,6 +17,8 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "bunyan": "^1.8.5",
+    "bunyan-loggly": "^1.1.0",
     "chance": "^1.0.4",
     "compression": "^1.6.2",
     "convict": "^2.0.0",
@@ -24,6 +27,7 @@
     "express": "^4.14.0",
     "lodash": "^4.17.4",
     "method-override": "^2.3.7",
+    "mkdirp": "^0.5.1",
     "moment": "^2.17.1",
     "mysql": "^2.12.0",
     "nodemailer": "^2.7.0",
@@ -32,6 +36,12 @@
   "devDependencies": {
     "eslint": "^3.12.2",
     "nodemon": "^1.11.0"
+  },
+  "apidoc": {
+    "title": "Navigo API",
+    "description": "API for Navigo",
+    "version": "1.0.0",
+    "sampleUrl": false
   },
   "repository": {
     "type": "git",
