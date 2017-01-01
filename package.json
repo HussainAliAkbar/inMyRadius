@@ -10,9 +10,7 @@
     "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json",
     "docs": "apidoc -i core/ -o core/apidoc/"
   },
-  "pre-commit": [
-    "lint"
-  ],
+  "pre-commit": [ "lint" ],
   "author": "Hussain Ali Akbar",
   "license": "ISC",
   "dependencies": {
