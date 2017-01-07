@@ -10,7 +10,9 @@
     "migrations-create": "./node_modules/.bin/db-migrate create $NAME --config migrations/database.json",
     "docs": "apidoc -i core/ -o core/apidoc/"
   },
-  "pre-commit": [ "lint" ],
+  "pre-commit": [
+    "lint"
+  ],
   "author": "Hussain Ali Akbar",
   "license": "ISC",
   "dependencies": {
@@ -29,6 +31,7 @@
     "moment": "^2.17.1",
     "mysql": "^2.12.0",
     "nodemailer": "^2.7.0",
+    "restify-errors": "^4.3.0",
     "storehouse": "https://Hussain94aa@bitbucket.org/Hussain94aa/storehouse.git"
   },
   "devDependencies": {
