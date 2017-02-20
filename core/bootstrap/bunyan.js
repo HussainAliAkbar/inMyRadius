@@ -39,7 +39,7 @@ let logStreams = [{
 // }
 
 let log = bunyan.createLogger({
-  name: 'navigo',
+  name: 'inMyRadius',
   target: config.get('env'),
   serializers: bunyan.stdSerializers,
   streams: logStreams
