@@ -1,7 +1,7 @@
 {
-  "name": "navigo-api",
+  "name": "inMyRadius-api",
   "version": "1.0.0",
-  "description": "API for navigo",
+  "description": "API for inMyRadius",
   "main": "core/index.js",
   "scripts": {
     "start": "nodemon --debug=3058 core/app.js --ignore ./core/logs",
@@ -39,14 +39,9 @@
     "nodemon": "^1.11.0"
   },
   "apidoc": {
-    "title": "Navigo API",
-    "description": "API for Navigo",
+    "title": "inMyRadius API",
+    "description": "API for inMyRadius",
     "version": "1.0.0",
     "sampleUrl": false
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://Hussain94aa@bitbucket.org/avialdodev/navigo-web-api.git"
-  },
-  "homepage": "https://bitbucket.org/avialdodev/navigo-web-api#readme"
+  }
 }
