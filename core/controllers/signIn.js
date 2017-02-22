@@ -10,12 +10,14 @@ module.exports = {
 
 function consumer(req, res, next) {
   let payload = {
-    firebaseUid: req.body.firebaseUid,
-    displayName: req.body.displayName,
+    firebase_uid: req.body.firebase_uid,
+    display_name: req.body.display_name,
     email: req.body.email,
-    photoUrl: req.body.photoUrl,
+    photo_url: req.body.photo_url,
     latitude: req.body.latitude,
     longitude: req.body.longitude,
+    firebase_instance_token: req.body.firebase_instance_token,
+    address: req.body.address,
     categories: req.body.categories
   };
   return services.signIn.consumer(payload)
