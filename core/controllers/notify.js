@@ -16,7 +16,9 @@ function notify(req, res, next) {
     category: req.body.category,
     contact_no: req.body.contact_no,
     name: req.body.name,
-    description: req.body.description
+    description: req.body.description,
+    from: req.body.from,
+    to: req.body.to
 
   };
   return services.notify.notify(payload)

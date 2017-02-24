@@ -29,8 +29,8 @@ function getProfile(req, res, next) {
 }
 function getNearbyRetailers(req, res, next) {
   let payload = {
-    latitude: req.query.latitude,
-    longitude: req.query.longitude
+    // latitude: req.query.latitude,
+    // longitude: req.query.longitude
   };
   return services.user.getNearbyRetailers(payload)
       .then((user) => {
