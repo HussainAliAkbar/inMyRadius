@@ -14,7 +14,10 @@ function notify(req, res, next) {
     latitude: req.body.latitude,
     longitude: req.body.longitude,
     category: req.body.category,
-    contact_no: req.body.contact_no
+    contact_no: req.body.contact_no,
+    name: req.body.name,
+    description: req.body.description
+
   };
   return services.notify.notify(payload)
     .then((user) => {
