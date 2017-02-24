@@ -11,8 +11,21 @@ module.exports = {
   deleteUser,
   authenticateUser,
   forgetPassword,
-  resetPassword
+  resetPassword,
+  getNearbyRetailers
 };
+
+function getNearbyRetailers(req, res, next) {
+  let payload = {
+    latitude: req.query.latitude,
+    longitude: req.query.longitude
+  };
+  return services.user.getNearbyRetailers(payload)
+      .then((user) => {
+        res.json(user);
+      })
+      .catch(next);
+}
 
 function createUser(req, res, next) {
   let payload = {
