@@ -12,9 +12,21 @@ module.exports = {
   authenticateUser,
   forgetPassword,
   resetPassword,
-  getNearbyRetailers
+  getNearbyRetailers,
+  getProfile
 };
 
+function getProfile(req, res, next) {
+  console.log(req.params);
+  let payload = {
+    firebase_uid: req.params.firebase_uid || ''
+  };
+  return services.user.getProfile(payload)
+      .then((user) => {
+        res.json(user);
+      })
+      .catch(next);
+}
 function getNearbyRetailers(req, res, next) {
   let payload = {
     latitude: req.query.latitude,

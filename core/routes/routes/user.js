@@ -42,4 +42,6 @@ const controllers = require('../../controllers');
 //get/retailer/?latitude=123.123&longitude=1231
 router.get('/get/retailer/', controllers.user.getNearbyRetailers);
 
+router.get('/get/profile/:firebase_uid', controllers.user.getProfile);
+
 module.exports = router;
